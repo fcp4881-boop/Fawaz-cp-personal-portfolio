@@ -18,7 +18,7 @@
     --foreground: hsl(0, 0%, 100%);
     --muted-foreground: hsl(240, 4%, 66%);
 
-    --font-heading: 'Instrument Serif', serif;
+    --font-heading: 'Outfit', sans-serif;
     --font-body: 'Inter', sans-serif;
 
     --container-width: 1200px;
