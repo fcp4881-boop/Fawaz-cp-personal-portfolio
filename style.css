@@ -1216,3 +1216,185 @@ h6 {
         right: 1rem;
     }
 }
+
+/* CINEMATIC HERO SCOPE */
+.cinematic-hero-scope {
+  --background: hsl(201, 100%, 13%);
+  --foreground: hsl(0, 0%, 100%);
+  --muted-foreground: hsl(240, 4%, 66%);
+  font-family: 'Inter', sans-serif;
+}
+
+.cinematic-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  max-width: 1280px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cinematic-logo {
+  font-family: 'Instrument Serif', serif;
+  font-size: 1.875rem;
+  letter-spacing: -0.025em;
+  color: var(--foreground);
+  text-decoration: none;
+}
+
+.cinematic-logo sup {
+  font-size: 0.75rem;
+  margin-left: 0.125rem;
+}
+
+.cinematic-nav-list {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  align-items: center;
+}
+
+.cinematic-nav-link {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.cinematic-nav-link:hover,
+.cinematic-nav-link.active {
+  color: var(--foreground);
+}
+
+.liquid-glass {
+  background: rgba(255, 255, 255, 0.01);
+  background-blend-mode: luminosity;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: none;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+  color: var(--foreground);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.liquid-glass:hover {
+  transform: scale(1.03);
+}
+
+.liquid-glass::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.4px;
+  background: linear-gradient(180deg,
+    rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.15) 20%,
+    rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%,
+    rgba(255,255,255,0.15) 80%, rgba(255,255,255,0.45) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.liquid-glass-nav {
+  padding: 0.625rem 1.5rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+}
+
+.liquid-glass-hero {
+  padding: 1.25rem 3.5rem;
+  border-radius: 9999px;
+  font-size: 1rem;
+  margin-top: 3rem;
+}
+
+.cinematic-hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 8rem 1.5rem 10rem;
+  overflow: hidden;
+  background-color: var(--background);
+}
+
+.cinematic-video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.8;
+}
+
+.cinematic-hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 80rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cinematic-h1 {
+  font-family: 'Instrument Serif', serif;
+  font-size: 4.5rem;
+  line-height: 0.95;
+  letter-spacing: -2.46px;
+  font-weight: 400;
+  color: var(--foreground);
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.cinematic-h1 em {
+  font-style: normal;
+  color: var(--muted-foreground);
+}
+
+.cinematic-subtext {
+  font-size: 1.125rem;
+  color: var(--muted-foreground);
+  max-width: 42rem;
+  line-height: 1.625;
+  margin: 0 auto;
+}
+
+@keyframes fade-rise {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-rise { animation: fade-rise 0.8s ease-out both; }
+.animate-fade-rise-delay { animation: fade-rise 0.8s ease-out 0.2s both; }
+.animate-fade-rise-delay-2 { animation: fade-rise 0.8s ease-out 0.4s both; }
+
+@media (min-width: 768px) {
+  .cinematic-h1 { font-size: 6rem; }
+}
+@media (max-width: 768px) {
+  .cinematic-nav-list { display: none; }
+  .cinematic-h1 { font-size: 3.5rem; }
+  .liquid-glass-nav { padding: 0.4rem 1rem; }
+  .cinematic-header { padding: 1.5rem 1rem; }
+}
