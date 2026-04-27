@@ -107,6 +107,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Project Filtering Logic
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Update active button
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filter = btn.getAttribute('data-filter');
+
+            projectCards.forEach(card => {
+                const category = card.getAttribute('data-category');
+                
+                if (filter === 'all' || filter === category) {
+                    card.classList.remove('hide');
+                    card.classList.add('show');
+                } else {
+                    card.classList.remove('show');
+                    card.classList.add('hide');
+                }
+            });
+        });
+    });
+
     // Lightbox Functionality
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
