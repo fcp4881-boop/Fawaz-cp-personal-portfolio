@@ -4,376 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Work Samples | Fawaz CP</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <!-- EmailJS SDK -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 
 <body>
-    <header class="cinematic-header">
-            <a href="#" class="cinematic-logo">Portfolio.<sup class="text-xs ml-0.5" style="font-size: 12px; margin-left: 2px;">®</sup></a>
-            <nav>
-                <ul class="cinematic-nav-list nav-list">
-                    <li><a href="#hero" class="cinematic-nav-link active">Home</a></li>
-                    <li><a href="#about" class="cinematic-nav-link">About</a></li>
-                    <li><a href="#education" class="cinematic-nav-link">Education</a></li>
-                    <li><a href="#skills" class="cinematic-nav-link">Skills</a></li>
-                    <li><a href="#experience" class="cinematic-nav-link">Experience</a></li>
-                    <li><a href="#projects" class="cinematic-nav-link">Projects</a></li>
-                    <li><a href="#contact" class="cinematic-nav-link">Contact</a></li>
-                </ul>
-            </nav>
-            <div style="display:flex; gap:10px; align-items:center;">
-                <a href="https://drive.google.com/file/d/1Hh0LL2CWrDz6S4ZjXxGbS3LB918lJHHc/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="liquid-glass liquid-glass-nav" style="display: none; @media(min-width: 768px){display: flex;}">
-                    Resume
-                </a>
-                <div class="menu-toggle" id="menu-toggle" style="margin: 0;">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </header>
-
-        <!-- Hero Section -->
-        <section id="hero" class="cinematic-hero-section">
-            <video autoplay loop muted playsinline class="cinematic-video-bg">
-                <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260314_131748_f2ca2a28-fed7-44c8-b9a9-bd9acdd5ec31.mp4" type="video/mp4" />
-            </video>
-
-            <div class="cinematic-hero-content">
-                <h1 class="cinematic-h1 animate-fade-rise">
-                    FAWAZ CP
-                </h1>
-                
-                <h2 class="animate-fade-rise-delay" style="color: var(--foreground); font-size: 1.5rem; margin-bottom: 1rem; font-weight: 500; font-family: 'Inter', sans-serif; letter-spacing: -0.025em;">
-                    Junior Formwork Design Engineer
-                </h2>
-
-                <p class="cinematic-subtext animate-fade-rise-delay">
-                    A passionate Civil Engineering graduate from MEA Engineering College, specializing in formwork design, BIM modeling, and structural systems. I combine technical precision with creative problem-solving to deliver efficient construction solutions — from AutoCAD drafting to Revit-based 3D design.
-                </p>
-
-                <div class="hero-buttons animate-fade-rise-delay-2" style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
-                    <a href="#projects" class="liquid-glass liquid-glass-hero" style="margin: 0;">
-                        Projects
-                    </a>
-                </div>
-            </div>
-        </section>
-
     <main>
-        <!-- About Section -->
-        <section id="about" class="about section">
-            <div class="container">
-                <div class="about-content text-center">
-                    <span class="subtitle">Who I Am</span>
-                    <h2 class="title" style="font-size: 2.5rem; margin-bottom: 2rem;">Professional Profile</h2>
-                    <p class="about-text" style="margin-bottom: 1.5rem;">
-                        Detail-oriented Civil Engineer (B.Tech) with hands-on experience in both site execution and formwork design engineering. Highly skilled in producing formwork and scaffolding drawings using DokaCAD and Revit, alongside resolving structural clashes and ensuring safety compliance on site. Proven ability to deliver complete residential design packages and coordinate effectively across multiple stakeholders to keep projects on schedule.
-                    </p>
-                    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; color: var(--text-muted); font-size: 0.95rem;">
-                        <span><strong style="color: var(--accent);">Languages:</strong> English, Malayalam, Hindi, Tamil</span>
-                        <span><strong style="color: var(--accent);">Availability:</strong> Immediate Joiner</span>
-                        <span><strong style="color: var(--accent);">License:</strong> Indian Driving License (Two & Four wheeler)</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="skills section">
-            <div class="container">
-                <div class="section-header text-center">
-                    <span class="subtitle">My Expertise</span>
-                    <h2 class="title">Skills & Capabilities</h2>
-                </div>
-
-                <div class="skills-categories">
-                    <!-- Technical Skills -->
-                    <div class="skill-category">
-                        <h3>Technical Skills</h3>
-                        <ul class="skill-list">
-                            <li>AutoCAD (2D & 3D Drafting)</li>
-                            <li>Revit (BIM Modeling & 3D Design)</li>
-                            <li>Tekla Structures (BIM & Detailing)</li>
-                            <li>Tekla Structural Designer (Analysis & Design)</li>
-                            <li>DokaCAD (Formwork Design)</li>
-                            <li>Doka Revit (Formwork BIM)</li>
-                            <li>SketchUp (3D Modeling & Visualization)</li>
-                            <li>Lumion (3D Rendering & Visualization)</li>
-                            <li>ETABS (Structural Analysis)</li>
-                            <li>Microsoft Word (Documentation & Reporting)</li>
-                            <li>Microsoft Excel (Data Analysis & BOM)</li>
-                            <li>Microsoft PowerPoint (Presentations)</li>
-                        </ul>
-                    </div>
-
-                    <!-- Professional Skills -->
-                    <div class="skill-category">
-                        <h3>Professional Skills</h3>
-                        <ul class="skill-list">
-                            <li>Formwork & Scaffolding Design</li>
-                            <li>Bill of Materials (BOM) Preparation</li>
-                            <li>Clash Resolution & Review</li>
-                            <li>Structural Drawing Analysis</li>
-                            <li>Construction Coordination</li>
-                            <li>Site Supervision & Safety Compliance</li>
-                            <li>3D Visualization</li>
-                        </ul>
-                    </div>
-
-                    <!-- Core Strengths -->
-                    <div class="skill-category">
-                        <h3>Core Strengths</h3>
-                        <ul class="skill-list">
-                            <li>Project Reporting & KPIs</li>
-                            <li>Problem Solving</li>
-                            <li>Cross-team Coordination</li>
-                            <li>Time Management</li>
-                            <li>Attention to Detail</li>
-                            <li>Stakeholder Management</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Education Section -->
-        <section id="education" class="education section">
-            <div class="container">
-                <div class="section-header text-center">
-                    <span class="subtitle">My Background</span>
-                    <h2 class="title">Education</h2>
-                </div>
-                <div class="education-content">
-                    <div class="education-image-container">
-                        <div class="project-img-wrapper" style="border-radius: var(--radius-md); overflow: hidden;">
-                            <img src="https://iili.io/qF0AOtp.md.jpg" data-highres="https://iili.io/qF0AOtp.jpg"
-                                alt="Graduation Day" class="project-img">
-                            <div class="project-overlay">
-                                <span class="btn-overlay">View High-Res</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="education-text">
-                        <h3>Graduation Day – B.Tech in Civil Engineering</h3>
-                        <p class="education-caption">A defining milestone marking the completion of my undergraduate
-                            journey in Civil Engineering — the foundation of my professional path in construction,
-                            formwork engineering, and structural systems.</p>
-
-                        <div class="education-details">
-                            <div class="detail-item">
-                                <span class="icon">🎓</span>
-                                <div>
-                                    <h4>Bachelor of Technology</h4>
-                                    <p>Civil Engineering</p>
-                                </div>
-                            </div>
-                            <div class="detail-item">
-                                <span class="icon">🏛️</span>
-                                <div>
-                                    <h4>MEA ENGINEERING COLLEGE</h4>
-                                    <p>APJ ABDUL KALAM TECHNOLOGICAL UNIVERSITY</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Diploma in Civil CAD -->
-                <div class="education-content">
-                    <div class="education-image-container">
-                        <div class="project-img-wrapper"
-                            style="border-radius: var(--radius-md); overflow: hidden; aspect-ratio: 4/3;">
-                            <img src="https://iili.io/qF0l079.md.jpg" data-highres="https://iili.io/qF0l079.jpg"
-                                alt="Diploma in Civil CAD" class="project-img">
-                            <div class="project-overlay">
-                                <span class="btn-overlay">View High-Res</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="education-text">
-                        <h3>Diploma in Civil CAD – Professional Certification</h3>
-                        <p class="education-caption">Successfully completed advanced training in Civil CAD technologies,
-                            covering AutoCAD 2D/3D, Revit, SketchUp, and Lumion for BIM modeling, 3D visualization, and
-                            construction documentation.</p>
-
-                        <div class="education-details">
-                            <div class="detail-item">
-                                <span class="icon">🎓</span>
-                                <div>
-                                    <h4>Professional Certification</h4>
-                                    <p>Diploma in Civil CAD</p>
-                                </div>
-                            </div>
-                            <div class="detail-item">
-                                <span class="icon">💻</span>
-                                <div>
-                                    <h4>Software Proficiency</h4>
-                                    <p>AutoCAD, Revit, SketchUp, Lumion</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Internship 1: AutoCAD -->
-                <div class="education-content">
-                    <div class="education-image-container">
-                        <div class="project-img-wrapper"
-                            style="border-radius: var(--radius-md); overflow: hidden; aspect-ratio: 4/3;">
-                            <img src="https://iili.io/qF0SO37.md.png" data-highres="https://iili.io/qF0SO37.png"
-                                alt="Internship - AutoCAD" class="project-img">
-                            <div class="project-overlay">
-                                <span class="btn-overlay">View High-Res</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="education-text">
-                        <h3>Internship – Basics of Professional Civil Engineering & AutoCAD</h3>
-                        <p class="education-caption">Completed a structured industry internship focused on core civil
-                            engineering practices and AutoCAD training, gaining hands-on exposure to professional
-                            workflows,
-                            drafting standards, and real-world engineering applications.</p>
-
-                        <div class="education-details">
-                            <div class="detail-item">
-                                <span class="icon">🏗️</span>
-                                <div>
-                                    <h4>Industry Internship</h4>
-                                    <p>Professional Experience</p>
-                                </div>
-                            </div>
-                            <div class="detail-item">
-                                <span class="icon">📏</span>
-                                <div>
-                                    <h4>Technical Competency</h4>
-                                    <p>AutoCAD Drafting Standards</p>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="btn btn-primary view-cert-btn" data-highres="https://iili.io/qF0SO37.png"
-                            data-title="Internship – Basics of Professional Civil Engineering & AutoCAD"
-                            style="margin-top: 2rem;">View Certificate</button>
-                    </div>
-                </div>
-
-                <!-- Internship 2: ETABS -->
-                <div class="education-content">
-                    <div class="education-image-container">
-                        <div class="project-img-wrapper"
-                            style="border-radius: var(--radius-md); overflow: hidden; aspect-ratio: 4/3;">
-                            <img src="https://iili.io/qF04qwg.md.png" data-highres="https://iili.io/qF04qwg.png"
-                                alt="Internship - ETABS" class="project-img">
-                            <div class="project-overlay">
-                                <span class="btn-overlay">View High-Res</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="education-text">
-                        <h3>Internship – Structural Engineering & ETABS</h3>
-                        <p class="education-caption">Completed a focused industry internship in structural engineering
-                            with
-                            hands-on exposure to ETABS software, covering structural analysis, modeling fundamentals,
-                            and
-                            real-world engineering workflows.</p>
-
-                        <div class="education-details">
-                            <div class="detail-item">
-                                <span class="icon">🏗️</span>
-                                <div>
-                                    <h4>Industry Internship</h4>
-                                    <p>Structural Engineering Focus</p>
-                                </div>
-                            </div>
-                            <div class="detail-item">
-                                <span class="icon">🌉</span>
-                                <div>
-                                    <h4>Software Specialization</h4>
-                                    <p>ETABS Analysis & Modeling</p>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="btn btn-primary view-cert-btn" data-highres="https://iili.io/qF04qwg.png"
-                            data-title="Internship – Structural Engineering & ETABS" style="margin-top: 2rem;">View
-                            Certificate</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="experience" class="experience section bg-alt">
-            <div class="container">
-                <div class="section-header text-center">
-                    <span class="subtitle">My Journey</span>
-                    <h2 class="title">Work Experience</h2>
-                </div>
-                <div class="timeline">
-                    <!-- Item 1 -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <span class="timeline-date">2024 – Present</span>
-                            <h3>Formwork & Scaffolding Junior Design Engineer</h3>
-                            <span class="company">Contract Role (Under Senior Designer) | Kerala, India</span>
-                            <ul style="list-style-type: disc; margin-left: 1.5rem; color: var(--text-muted); margin-top: 1rem;">
-                                <li>Produced 30+ formwork and scaffolding drawings (walls, slabs, beams, columns) using DokaCAD and Doka Revit with minimal revision requests.</li>
-                                <li>Prepared detailed Bill of Materials (BOM) for every project by extracting material quantities directly from drawings.</li>
-                                <li>Resolved flagged design clashes in cross-team reviews before reaching site, eliminating costly rework.</li>
-                                <li>Supported project executions as technical design engineer, ensuring formwork solutions met safety load requirements.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Item 2 -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <span class="timeline-date">Aug 2025 - Jan 2026</span>
-                            <h3>Site Engineer / Supervisor</h3>
-                            <span class="company">PMR EDIFICE | Kerala, India</span>
-                            <ul style="list-style-type: disc; margin-left: 1.5rem; color: var(--text-muted); margin-top: 1rem;">
-                                <li>Maintained zero safety incidents across the entire project duration by enforcing daily compliance checks.</li>
-                                <li>Delivered daily progress reports for a bridge project, tracking resource allocation and contractor KPIs.</li>
-                                <li>Identified structural discrepancies between drawings and site conditions before concrete pours.</li>
-                                <li>Coordinated across 4 stakeholder groups (engineers, subcontractors, consultants, client) with zero documented miscommunication delays.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Item 3 -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <span class="timeline-date">Jan 2025 - Aug 2025</span>
-                            <h3>Residential Design Engineer / 3D Modeler</h3>
-                            <span class="company">Freelance | Kerala, India</span>
-                            <ul style="list-style-type: disc; margin-left: 1.5rem; color: var(--text-muted); margin-top: 1rem;">
-                                <li>Delivered complete design packages for 10+ residential clients — 2D plans, 3D models, and photorealistic Lumion renders.</li>
-                                <li>Achieved 100% client approval rate on first presentation.</li>
-                                <li>Compressed design-to-render cycle to under 5 working days using parallel AutoCAD, Revit, and Lumion workflows.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- Projects Section -->
-        <section id="projects" class="projects section bg-alt">
+        <section id="projects" class="projects section">
             <div class="container-fluid">
                 <div class="section-header text-center">
-                    <span class="subtitle">My Work</span>
-                    <h2 class="title">Work Samples</h2>
+                    <span class="subtitle">Fawaz CP</span>
+                    <h1 class="title">Work Samples</h1>
                 </div>
-                <div class="projects-filter animate-fade-rise">
-                    <button class="filter-btn active" data-filter="all">All</button>
+                
+                <div class="projects-filter">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
                     <button class="filter-btn" data-filter="structural-bim">Structural & BIM</button>
                     <button class="filter-btn" data-filter="formwork">Formwork Design</button>
                     <button class="filter-btn" data-filter="viz-site">Viz & Site</button>
@@ -383,17 +34,17 @@
                     <!-- Project 1: Tekla Structural Designer -->
                     <article class="project-card" style="order: 1;" data-category="structural-bim">
                         <div class="project-slider">
-                            <div class="project-slide active project-img-wrapper" style="border-bottom: none;">
+                            <div class="project-slide active project-img-wrapper">
                                 <img src="https://iili.io/BPrxQqv.md.png" data-highres="https://iili.io/BPrxQqv.png"
                                     alt="TSD Analysis 1" class="project-img">
                                 <div class="project-overlay"><span class="btn-overlay">View Design</span></div>
                             </div>
-                            <div class="project-slide project-img-wrapper" style="border-bottom: none;">
+                            <div class="project-slide project-img-wrapper">
                                 <img src="https://iili.io/BPrxZ1R.md.png" data-highres="https://iili.io/BPrxZ1R.png"
                                     alt="TSD Analysis 2" class="project-img">
                                 <div class="project-overlay"><span class="btn-overlay">View Design</span></div>
                             </div>
-                            <div class="project-slide project-img-wrapper" style="border-bottom: none;">
+                            <div class="project-slide project-img-wrapper">
                                 <img src="https://iili.io/BPrxPzg.md.png" data-highres="https://iili.io/BPrxPzg.png"
                                     alt="TSD Analysis 3" class="project-img">
                                 <div class="project-overlay"><span class="btn-overlay">View Design</span></div>
@@ -410,27 +61,26 @@
                             <div class="project-tags">
                                 <span class="tag">Structural Analysis</span>
                                 <span class="tag">Steel Design</span>
-                                <span class="tag">TSD</span>
                             </div>
                             <h3>Structural Analysis & Design | Tekla Structural Designer</h3>
-                            <p>Automated structural analysis and design optimization for complex building projects, ensuring structural integrity and compliance.</p>
+                            <p>Automated structural analysis and design optimization for complex building projects.</p>
                         </div>
                     </article>
 
                     <!-- Project 2: Tekla Structures -->
                     <article class="project-card" style="order: 9;" data-category="structural-bim">
                         <div class="project-slider">
-                            <div class="project-slide active project-img-wrapper" style="border-bottom: none;">
+                            <div class="project-slide active project-img-wrapper">
                                 <img src="https://iili.io/BPg8dYv.md.png" data-highres="https://iili.io/BPg8dYv.png"
                                     alt="Tekla Model 1" class="project-img">
                                 <div class="project-overlay"><span class="btn-overlay">View Model</span></div>
                             </div>
-                            <div class="project-slide project-img-wrapper" style="border-bottom: none;">
+                            <div class="project-slide project-img-wrapper">
                                 <img src="https://iili.io/BPgvpCF.md.png" data-highres="https://iili.io/BPgvpCF.png"
                                     alt="Tekla Model 2" class="project-img">
                                 <div class="project-overlay"><span class="btn-overlay">View Model</span></div>
                             </div>
-                            <div class="project-slide project-img-wrapper" style="border-bottom: none;">
+                            <div class="project-slide project-img-wrapper">
                                 <img src="https://iili.io/BPgvyEg.md.png" data-highres="https://iili.io/BPgvyEg.png"
                                     alt="Tekla Model 3" class="project-img">
                                 <div class="project-overlay"><span class="btn-overlay">View Model</span></div>
@@ -446,28 +96,27 @@
                         <div class="project-content">
                             <div class="project-tags">
                                 <span class="tag">BIM Detailing</span>
-                                <span class="tag">Technical Design</span>
                                 <span class="tag">Tekla</span>
                             </div>
                             <h3>Models in TEKLA Structures</h3>
-                            <p>Advanced structural modeling and detailing using Tekla Structures for accurate construction coordination and fabrication.</p>
+                            <p>Advanced structural modeling and detailing for accurate construction coordination.</p>
                         </div>
                     </article>
 
                     <!-- Project 3: Revit Slab & Beam -->
                     <article class="project-card" style="order: 7;" data-category="structural-bim">
                         <div class="project-slider">
-                            <div class="project-slide active project-img-wrapper" style="border-bottom: none;">
+                            <div class="project-slide active project-img-wrapper">
                                 <img src="https://iili.io/qF5pdtn.md.png" data-highres="https://iili.io/qF5pdtn.png"
                                     alt="Isometric View" class="project-img">
                                 <div class="project-overlay"><span class="btn-overlay">View Model</span></div>
                             </div>
-                            <div class="project-slide project-img-wrapper" style="border-bottom: none;">
+                            <div class="project-slide project-img-wrapper">
                                 <img src="https://iili.io/qF5p7Kx.md.png" data-highres="https://iili.io/qF5p7Kx.png"
                                     alt="Section View" class="project-img">
                                 <div class="project-overlay"><span class="btn-overlay">View Model</span></div>
                             </div>
-                            <div class="project-slide project-img-wrapper" style="border-bottom: none;">
+                            <div class="project-slide project-img-wrapper">
                                 <img src="https://iili.io/qF5mZMJ.md.png" data-highres="https://iili.io/qF5mZMJ.png"
                                     alt="Top View" class="project-img">
                                 <div class="project-overlay"><span class="btn-overlay">View Model</span></div>
@@ -484,27 +133,26 @@
                             <div class="project-tags">
                                 <span class="tag">BIM</span>
                                 <span class="tag">Revit</span>
-                                <span class="tag">Structural</span>
                             </div>
                             <h3>Revit-Based Formwork Design – Slab & Beam System</h3>
-                            <p>Detailed 3D BIM modeling of formwork, props, and slab support system for structural construction planning.</p>
+                            <p>Detailed 3D BIM modeling of formwork and slab support systems.</p>
                         </div>
                     </article>
 
                     <!-- Project: Piers 3D Modeling in Revit -->
                     <article class="project-card" style="order: 3;" data-category="structural-bim">
                         <div class="project-slider">
-                            <div class="project-slide active project-img-wrapper" style="border-bottom: none;">
+                            <div class="project-slide active project-img-wrapper">
                                 <img src="https://iili.io/BsFq2Du.md.png" data-highres="https://iili.io/BsFq2Du.png"
                                     alt="Piers Modeling View 1" class="project-img">
                                 <div class="project-overlay"><span class="btn-overlay">View Model</span></div>
                             </div>
-                            <div class="project-slide project-img-wrapper" style="border-bottom: none;">
+                            <div class="project-slide project-img-wrapper">
                                 <img src="https://iili.io/BsFqdNe.md.png" data-highres="https://iili.io/BsFqdNe.png"
                                     alt="Piers Modeling View 2" class="project-img">
                                 <div class="project-overlay"><span class="btn-overlay">View Model</span></div>
                             </div>
-                            <div class="project-slide project-img-wrapper" style="border-bottom: none;">
+                            <div class="project-slide project-img-wrapper">
                                 <img src="https://iili.io/BsFqHH7.md.png" data-highres="https://iili.io/BsFqHH7.png"
                                     alt="Piers Modeling View 3" class="project-img">
                                 <div class="project-overlay"><span class="btn-overlay">View Model</span></div>
@@ -519,30 +167,28 @@
                         </div>
                         <div class="project-content">
                             <div class="project-tags">
-                                <span class="tag">BIM Modeling</span>
                                 <span class="tag">Revit</span>
                                 <span class="tag">Infrastructure</span>
                             </div>
                             <h3>Piers 3D Modeling in Revit</h3>
-                            <p>Accurate 3D BIM modeling of infrastructure bridge piers in Revit, highlighting detailed structural geometry and coordination for heavy civil construction.</p>
+                            <p>3D BIM modeling of bridge piers highlighting detailed structural geometry.</p>
                         </div>
                     </article>
-
 
                     <!-- Project 4: PERI Formwork Practice Models -->
                     <article class="project-card" style="order: 2;" data-category="formwork">
                         <div class="project-slider">
-                            <div class="project-slide active project-img-wrapper" style="border-bottom: none;">
+                            <div class="project-slide active project-img-wrapper">
                                 <img src="https://iili.io/Bs3OOfn.md.png" data-highres="https://iili.io/Bs3OOfn.png"
                                     alt="PERI System View 1" class="project-img">
                                 <div class="project-overlay"><span class="btn-overlay">View Model</span></div>
                             </div>
-                            <div class="project-slide project-img-wrapper" style="border-bottom: none;">
+                            <div class="project-slide project-img-wrapper">
                                 <img src="https://iili.io/Bs3OjVt.md.png" data-highres="https://iili.io/Bs3OjVt.png"
                                     alt="PERI System View 2" class="project-img">
                                 <div class="project-overlay"><span class="btn-overlay">View Model</span></div>
                             </div>
-                            <div class="project-slide project-img-wrapper" style="border-bottom: none;">
+                            <div class="project-slide project-img-wrapper">
                                 <img src="https://iili.io/Bs3OhxI.md.png" data-highres="https://iili.io/Bs3OhxI.png"
                                     alt="PERI System View 3" class="project-img">
                                 <div class="project-overlay"><span class="btn-overlay">View Model</span></div>
@@ -559,22 +205,21 @@
                             <div class="project-tags">
                                 <span class="tag">PERI Systems</span>
                                 <span class="tag">Formwork</span>
-                                <span class="tag">BIM Modeling</span>
                             </div>
                             <h3>PERI Formwork Practice Models | TRIO & SKYDECK</h3>
-                            <p>Detailed practice models demonstrating proficiency in PERI formwork systems, focusing on TRIO wall and SKYDECK slab formwork configurations for efficient cycle planning.</p>
+                            <p>Practice models demonstrating proficiency in PERI formwork systems.</p>
                         </div>
                     </article>
 
                     <!-- Project 5: Doka Wall Formwork -->
                     <article class="project-card" style="order: 8;" data-category="formwork">
                         <div class="project-slider">
-                            <div class="project-slide active project-img-wrapper" style="border-bottom: none;">
+                            <div class="project-slide active project-img-wrapper">
                                 <img src="https://iili.io/qFRDnd7.md.png" data-highres="https://iili.io/qFRDnd7.png"
                                     alt="Isometric View" class="project-img">
                                 <div class="project-overlay"><span class="btn-overlay">View Model</span></div>
                             </div>
-                            <div class="project-slide project-img-wrapper" style="border-bottom: none;">
+                            <div class="project-slide project-img-wrapper">
                                 <img src="https://iili.io/qFRtAlI.md.png" data-highres="https://iili.io/qFRtAlI.png"
                                     alt="Top View" class="project-img">
                                 <div class="project-overlay"><span class="btn-overlay">View Model</span></div>
@@ -588,16 +233,15 @@
                         </div>
                         <div class="project-content">
                             <div class="project-tags">
-                                <span class="tag">Formwork</span>
                                 <span class="tag">Doka</span>
                                 <span class="tag">BIM</span>
                             </div>
                             <h3>Doka Wall Formwork System – BIM Model (Revit)</h3>
-                            <p>Detailed BIM modeling of Doka wall formwork system showcasing panel layout, support systems, and construction accuracy.</p>
+                            <p>Detailed BIM modeling of Doka wall formwork systems.</p>
                         </div>
                     </article>
 
-                    <!-- Project 5: Doka Flex Video -->
+                    <!-- Project: Doka Flex Video -->
                     <article class="project-card" style="order: 5;" data-category="formwork">
                         <div class="project-video-wrapper">
                             <iframe src="https://www.youtube.com/embed/jBBiXLSXiV0?si=pmV0s1KybOVapyTj"
@@ -609,22 +253,21 @@
                             <div class="project-tags">
                                 <span class="tag">Slab Formwork</span>
                                 <span class="tag">Revit</span>
-                                <span class="tag">Process</span>
                             </div>
                             <h3>Doka Flex Slab Formwork | Practice Model</h3>
-                            <p>Detailed video presentation showcasing the engineering workflow, modeled in Revit and rendered in Lumion.</p>
+                            <p>Engineering workflow showcase modeled in Revit and rendered in Lumion.</p>
                         </div>
                     </article>
 
                     <!-- Project 6: Scaffolding System -->
                     <article class="project-card" style="order: 4;" data-category="formwork">
                         <div class="project-slider">
-                            <div class="project-slide active project-img-wrapper" style="border-bottom: none;">
+                            <div class="project-slide active project-img-wrapper">
                                 <img src="https://iili.io/qFlWoib.md.png" data-highres="https://iili.io/qFlWoib.png"
                                     alt="Scaffolding Detail" class="project-img">
                                 <div class="project-overlay"><span class="btn-overlay">View Model</span></div>
                             </div>
-                            <div class="project-slide project-img-wrapper" style="border-bottom: none;">
+                            <div class="project-slide project-img-wrapper">
                                 <img src="https://iili.io/qFlW4m7.md.png" data-highres="https://iili.io/qFlW4m7.png"
                                     alt="Scaffolding Detail 2" class="project-img">
                                 <div class="project-overlay"><span class="btn-overlay">View Model</span></div>
@@ -640,23 +283,21 @@
                             <div class="project-tags">
                                 <span class="tag">Scaffolding</span>
                                 <span class="tag">Technical</span>
-                                <span class="tag">Civil</span>
                             </div>
                             <h3>Slab Formwork, Shoring & Scaffolding System Design</h3>
-                            <p>Comprehensive technical drawing showing integrated formwork and scaffolding systems for structural construction.</p>
+                            <p>Comprehensive technical drawing of integrated formwork and scaffolding systems.</p>
                         </div>
                     </article>
-
 
                     <!-- Project 8: Site Execution -->
                     <article class="project-card" style="order: 6;" data-category="viz-site">
                         <div class="project-slider">
-                            <div class="project-slide active project-img-wrapper" style="border-bottom: none;">
+                            <div class="project-slide active project-img-wrapper">
                                 <img src="https://iili.io/qF736QI.md.jpg" data-highres="https://iili.io/qF736QI.jpg"
                                     alt="Site 1" class="project-img">
                                 <div class="project-overlay"><span class="btn-overlay">View Photo</span></div>
                             </div>
-                            <div class="project-slide project-img-wrapper" style="border-bottom: none;">
+                            <div class="project-slide project-img-wrapper">
                                 <img src="https://iili.io/qF7Fcjp.md.jpg" data-highres="https://iili.io/qF7Fcjp.jpg"
                                     alt="Site 2" class="project-img">
                                 <div class="project-overlay"><span class="btn-overlay">View Photo</span></div>
@@ -671,24 +312,23 @@
                         <div class="project-content">
                             <div class="project-tags">
                                 <span class="tag">Site Execution</span>
-                                <span class="tag">Coordination</span>
                                 <span class="tag">Field</span>
                             </div>
                             <h3>Formwork, Reinforcement & Structural Coordination</h3>
-                            <p>On-site execution demonstrating formwork installation, rebar arrangement, and structural preparation.</p>
+                            <p>On-site execution demonstrating formwork installation and preparation.</p>
                         </div>
                     </article>
 
                     <!-- Project 8: Residential Viz -->
                     <article class="project-card" style="order: 10;" data-category="viz-site">
                         <div class="project-slider">
-                            <div class="project-slide active project-video-wrapper" style="border-bottom: none;">
+                            <div class="project-slide active project-video-wrapper">
                                 <iframe src="https://www.youtube.com/embed/n4dRnAll4ng?si=418XQsKd63BZDMst"
                                     title="YouTube video player" frameborder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             </div>
-                            <div class="project-slide project-img-wrapper" style="border-bottom: none;">
+                            <div class="project-slide project-img-wrapper">
                                 <img src="https://iili.io/qFlfFLv.md.png" data-highres="https://iili.io/qFlfFLv.png"
                                     alt="Residential 1" class="project-img">
                                 <div class="project-overlay"><span class="btn-overlay">View Render</span></div>
@@ -704,146 +344,28 @@
                             <div class="project-tags">
                                 <span class="tag">Visualization</span>
                                 <span class="tag">Lumion</span>
-                                <span class="tag">Design</span>
                             </div>
                             <h3>Modern Residential Building – 3D Architectural Visualization</h3>
-                            <p>High-quality 3D exterior rendering and walkthrough showing contemporary architectural design.</p>
+                            <p>High-quality 3D exterior rendering and walkthrough showcase.</p>
                         </div>
                     </article>
                 </div>
             </div>
         </section>
-
-        <!-- Services Section -->
-        <section id="services" class="services section">
-            <div class="container">
-                <div class="section-header text-center">
-                    <span class="subtitle">What I Do</span>
-                    <h2 class="title">My Services</h2>
-                </div>
-                <div class="services-list">
-                    <div class="service-item">
-                        <span class="service-number">01</span>
-                        <div class="service-info">
-                            <h3>Formwork & Scaffolding</h3>
-                            <p>Design support for safe and efficient construction structures.</p>
-                        </div>
-                        <div class="service-action"><span class="arrow">&nearr;</span></div>
-                    </div>
-                    <div class="service-item">
-                        <span class="service-number">02</span>
-                        <div class="service-info">
-                            <h3>2D & 3D Structural Drawings</h3>
-                            <p>Precise drafting and modeling for engineering projects.</p>
-                        </div>
-                        <div class="service-action"><span class="arrow">&nearr;</span></div>
-                    </div>
-                    <div class="service-item">
-                        <span class="service-number">03</span>
-                        <div class="service-info">
-                            <h3>BIM Modeling (Revit)</h3>
-                            <p>Building Information Modeling for modern construction workflows.</p>
-                        </div>
-                        <div class="service-action"><span class="arrow">&nearr;</span></div>
-                    </div>
-                    <div class="service-item">
-                        <span class="service-number">04</span>
-                        <div class="service-info">
-                            <h3>Residential Design & 3D Modeling</h3>
-                            <p>Bringing architectural concepts to life with detailed models.</p>
-                        </div>
-                        <div class="service-action"><span class="arrow">&nearr;</span></div>
-                    </div>
-                    <div class="service-item">
-                        <span class="service-number">05</span>
-                        <div class="service-info">
-                            <h3>Construction Site Support</h3>
-                            <p>On-site coordination and supervision support.</p>
-                        </div>
-                        <div class="service-action"><span class="arrow">&nearr;</span></div>
-                    </div>
-                    <div class="service-item">
-                        <span class="service-number">06</span>
-                        <div class="service-info">
-                            <h3>Visualization</h3>
-                            <p>3D Visualization & Presentation Models using Lumion/SketchUp.</p>
-                        </div>
-                        <div class="service-action"><span class="arrow">&nearr;</span></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="contact section bg-alt">
-            <div class="container contact-container">
-                <div class="contact-info">
-                    <span class="subtitle">Get in Touch</span>
-                    <h2 class="title">Let's Connect</h2>
-                    <p>I am available for opportunities in Civil Engineering and Formwork Design.</p>
-                    <div class="contact-details">
-                        <div class="detail-item">
-                            <span class="icon">👤</span>
-                            <span>Fawaz CP</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="icon">📧</span>
-                            <a href="mailto:fawazcheripurath@gmail.com">fawazcheripurath@gmail.com</a>
-                        </div>
-                        <div class="detail-item">
-                            <span class="icon">📱</span>
-                            <a href="tel:+918137967329">+91 81379 67329</a>
-                        </div>
-                        <div class="detail-item">
-                            <span class="icon">🔗</span>
-                            <a href="https://www.linkedin.com/in/fawaz-cp" target="_blank">linkedin.com/in/fawaz-cp</a>
-                        </div>
-                        <div class="detail-item">
-                            <span class="icon">🌍</span>
-                            <span>Nationality: Indian</span>
-                        </div>
-                    </div>
-                </div>
-                <form id="contact-form" class="contact-form" action="#" method="POST">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" placeholder="How can I help you?"
-                            required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary full-width">Send Message</button>
-                </form>
-            </div>
-        </section>
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <a href="#" class="logo">Portfolio.</a>
-                <p>&copy; 2024 Fawaz. All rights reserved.</p>
-                <div class="social-links">
-                    <a href="#">Twitter</a>
-                    <a href="#">LinkedIn</a>
-                    <a href="#">GitHub</a>
-                </div>
-            </div>
+        <div class="container text-center">
+            <p>&copy; 2024 Fawaz CP | Junior Formwork Design Engineer</p>
         </div>
     </footer>
 
     <!-- Image Lightbox Modal -->
     <div id="lightbox" class="lightbox">
         <span class="lightbox-close">&times;</span>
-        <button class="lightbox-nav lightbox-prev" style="display: none;">&#10094;</button>
+        <button class="lightbox-nav lightbox-prev">&#10094;</button>
         <img class="lightbox-content" id="lightbox-img">
-        <button class="lightbox-nav lightbox-next" style="display: none;">&#10095;</button>
+        <button class="lightbox-nav lightbox-next">&#10095;</button>
         <div id="lightbox-caption"></div>
     </div>
 

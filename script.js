@@ -1,77 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
-
-    // Mobile Menu Toggle (Simplified)
-    const menuToggle = document.getElementById('menu-toggle');
-    const navList = document.querySelector('.nav-list');
-
-    if (menuToggle) {
-        menuToggle.addEventListener('click', () => {
-            navList.style.display = navList.style.display === 'flex' ? 'none' : 'flex';
-            if (navList.style.display === 'flex') {
-                navList.style.flexDirection = 'column';
-                navList.style.position = 'absolute';
-                navList.style.top = '100%';
-                navList.style.left = '0';
-                navList.style.width = '100%';
-                navList.style.background = '#0d0d0d';
-                navList.style.padding = '2rem';
-                navList.style.borderBottom = '1px solid rgba(255,255,255,0.1)';
-            }
-        });
-    }
-
-    // Add scroll class to header for styling changes on scroll
-    const header = document.querySelector('.header');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.style.background = 'rgba(13, 13, 13, 0.95)';
-            header.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.5)';
-        } else {
-            header.style.background = 'rgba(13, 13, 13, 0.8)';
-            header.style.boxShadow = 'none';
-        }
-    });
-    // EmailJS Integration
-    emailjs.init("zYg2D2WmVG0zH6HaG");
-
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function (event) {
-            event.preventDefault();
-
-            const btn = contactForm.querySelector('button[type="submit"]');
-            const originalBtnText = btn.innerText;
-            btn.innerText = 'Sending...';
-            btn.disabled = true;
-
-            emailjs.sendForm('service_m7gkp2h', 'template_cf1yrft', this)
-                .then(() => {
-                    btn.innerText = 'Message Sent!';
-                    contactForm.reset();
-                    setTimeout(() => {
-                        btn.innerText = originalBtnText;
-                        btn.disabled = false;
-                    }, 3000);
-                }, (error) => {
-                    console.error('FAILED...', error);
-                    btn.innerText = 'Failed to Send';
-                    setTimeout(() => {
-                        btn.innerText = originalBtnText;
-                        btn.disabled = false;
-                    }, 3000);
-                });
-        });
-    }
-
     // Project Slider Functionality
     document.querySelectorAll('.project-slider').forEach(slider => {
         const slides = slider.querySelectorAll('.project-slide');
@@ -113,7 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            // Update active button
             filterBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
 
@@ -121,13 +47,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             projectCards.forEach(card => {
                 const category = card.getAttribute('data-category');
-                
                 if (filter === 'all' || filter === category) {
-                    card.classList.remove('hide');
-                    card.classList.add('show');
+                    card.style.display = 'block';
                 } else {
-                    card.classList.remove('show');
-                    card.classList.add('hide');
+                    card.style.display = 'none';
                 }
             });
         });
@@ -158,30 +81,17 @@ document.addEventListener('DOMContentLoaded', () => {
             nextBtnLight.style.display = 'none';
         }
 
-        // Show Lightbox
-        lightbox.style.display = 'flex';
-        // Trigger reflow for animation
-        void lightbox.offsetWidth;
         lightbox.classList.add('active');
     }
 
-    // Attach click events to project overlays
     document.querySelectorAll('.project-img-wrapper').forEach(wrapper => {
         wrapper.addEventListener('click', function () {
             const img = this.querySelector('img.project-img');
-            const projectCard = this.closest('.project-card') || this.closest('.education-content');
-
-            let title = '';
-            if (projectCard.querySelector('.project-content h3')) {
-                title = projectCard.querySelector('.project-content h3').innerText;
-            } else if (projectCard.querySelector('.education-text h3')) {
-                title = projectCard.querySelector('.education-text h3').innerText;
-            }
+            const projectCard = this.closest('.project-card');
+            const title = projectCard.querySelector('h3').innerText;
 
             if (img) {
                 const highresSrc = img.getAttribute('data-highres') || img.src;
-
-                // Check if it's part of a slider
                 const slider = this.closest('.project-slider');
                 let gallery = [];
                 let index = 0;
@@ -202,25 +112,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Attach click events to "View Certificate" buttons
-    document.querySelectorAll('.view-cert-btn').forEach(btn => {
-        btn.addEventListener('click', function () {
-            const highresSrc = this.getAttribute('data-highres');
-            const title = this.getAttribute('data-title');
-            if (highresSrc) {
-                openLightbox(highresSrc, title, [{ src: highresSrc, caption: title }], 0);
-            }
-        });
-    });
-
-    // Lightbox Navigation Logic
+    // Lightbox Navigation
     if (prevBtnLight && nextBtnLight) {
         prevBtnLight.addEventListener('click', (e) => {
             e.stopPropagation();
             if (currentGallery.length > 0) {
                 currentGalleryIndex = (currentGalleryIndex - 1 + currentGallery.length) % currentGallery.length;
                 lightboxImg.src = currentGallery[currentGalleryIndex].src;
-                lightboxCaption.innerText = currentGallery[currentGalleryIndex].caption;
             }
         });
 
@@ -229,29 +127,19 @@ document.addEventListener('DOMContentLoaded', () => {
             if (currentGallery.length > 0) {
                 currentGalleryIndex = (currentGalleryIndex + 1) % currentGallery.length;
                 lightboxImg.src = currentGallery[currentGalleryIndex].src;
-                lightboxCaption.innerText = currentGallery[currentGalleryIndex].caption;
             }
         });
     }
 
-    // Close lightbox on 'X' click
+    // Close Lightbox
     if (closeBtn) {
-        closeBtn.addEventListener('click', () => {
-            lightbox.classList.remove('active');
-            setTimeout(() => {
-                lightbox.style.display = 'none';
-            }, 300); // Wait for transition
-        });
+        closeBtn.addEventListener('click', () => lightbox.classList.remove('active'));
     }
-
-    // Close lightbox on clicking outside image
+    
     if (lightbox) {
         lightbox.addEventListener('click', (e) => {
-            if (e.target !== lightboxImg) {
+            if (e.target !== lightboxImg && e.target !== prevBtnLight && e.target !== nextBtnLight) {
                 lightbox.classList.remove('active');
-                setTimeout(() => {
-                    lightbox.style.display = 'none';
-                }, 300);
             }
         });
     }
