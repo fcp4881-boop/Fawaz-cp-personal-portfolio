@@ -7,12 +7,22 @@ document.addEventListener('DOMContentLoaded', () => {
         const dots = slider.querySelectorAll('.dot');
         let currentSlide = 0;
 
+        // Inject slide counter badge (only if more than 1 slide)
+        let counter = null;
+        if (slides.length > 1) {
+            counter = document.createElement('div');
+            counter.className = 'slide-counter';
+            counter.textContent = `1 / ${slides.length}`;
+            slider.appendChild(counter);
+        }
+
         function goToSlide(n) {
             slides[currentSlide].classList.remove('active');
-            dots[currentSlide].classList.remove('active');
+            dots[currentSlide] && dots[currentSlide].classList.remove('active');
             currentSlide = (n + slides.length) % slides.length;
             slides[currentSlide].classList.add('active');
-            dots[currentSlide].classList.add('active');
+            dots[currentSlide] && dots[currentSlide].classList.add('active');
+            if (counter) counter.textContent = `${currentSlide + 1} / ${slides.length}`;
         }
 
         if (nextBtn && prevBtn) {
